@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plagiarism Checker</title>
+<style>
+  body {
+    font-family: "Calibri", sans-serif;
+    color: #ccc;
+    background-image: url("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWVzdGhldGljJTIwYm9va3N8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    color: black;
+  }
+  
+  h3 {
+    font-size: 2em;
+  }
+  
+  p {
+    text-align: center;
+    margin: 0 0 1em 0;
+    font-family: monospace;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 1em;
+  }
+  
+  button {
+    background-color: #ff00ff;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .container {
+    width: 500px;
+    background-image: url('https://i.pinimg.com/originals/fa/e7/83/fae783846d0db2be50e70968d9fe4237.png');
+    margin: 0 auto;
+  }
+  
+  .about-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  #about {
+    background-color: white;
+    color: black;
+    padding: 10px;
+  }
+</style>
+  
+</head>
+<body>
+<div class="container">
+  <h1>Plagiarism Checker</h1>
+  <br>
+  <br>
+  <form action="http://localhost:5000" method="POST">
+    <p>Input Text : </p>
+    <p><textarea name="query" rows="8" cols="50" autofocus placeholder="QUERY" style="width: 100%; max-width: 400px; box-sizing: border-box;"></textarea></p>
+
+    <br>
+    <p><input type="submit" name="submit" value="CHECK PLAGIARISM"></p>
+    <br>
+    <p><h3>{{output}}</h3></p>
+  </form>
+  
+  <button class="about-button" onclick="openAboutPage()">About Us</button>
+</div>
+
+<script>
+function openAboutPage() {
+  window.location.href= "/about";
+}
+</script>
+</body>
+</html>
